@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.toolbar {
+  outline: none;
+  outline-offset: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.toolbar-button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  height: fit-content;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.toolbar-button.active {
+  outline: none;
+  background: black;
+}
+
+.toolbar-button.active svg {
+  stroke: white;
+}
+
+.toolbar-button.fill.active svg {
+  fill: white;
+}
+
+.ProseMirror {
+  margin-top: 1rem;
+  outline: none;
+  outline-offset: 5px;
+  margin-inline: 10px;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-inline-start: 2rem;
+}
+
+.ProseMirror blockquote {
+  position: relative;
+  padding: 1px 1rem;
+}
+
+.ProseMirror pre {
+  background: gainsboro;
+  padding: 1rem 2rem;
+}
+
+.ProseMirror > blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.5rem;
+  background: gray;
+  opacity: 0.5;
+}
+
+.ProseMirror-focused {
+  outline: none;
+}
